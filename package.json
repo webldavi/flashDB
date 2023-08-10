@@ -1,13 +1,13 @@
 {
-  "name": "flash_db",
-  "version": "1.0.0",
+  "name": "flashdatabase",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js"
   },
-  "keywords": [],
+  "keywords": ["database", "flashdatabase"],
   "author": "",
   "license": "ISC",
   "devDependencies": {
