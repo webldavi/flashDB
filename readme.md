@@ -1,13 +1,13 @@
-# flashDB
+# flashdatabase
 
-FlashDB é uma biblioteca simples para modificar arquivos .json rapidamente, usando javascript e node.js
+Flashdatabase é uma biblioteca simples para modificar arquivos .json rapidamente, usando javascript e node.js
 
 ## Instalação
 
-instale o flashDB usando npm
+instale o flashdatabase usando npm
 
 ```bash
-  $ npm install flashDB
+  $ npm install flashdatabase
 ```
 
 ## Como usar
