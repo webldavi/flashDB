@@ -1,14 +1,21 @@
 const fs = require('fs');
 class flashDB {
-    constructor(filePath) {
-        this.filePath = filePath;
-        this.data = require(filePath)
+    constructor() {
         this.logModel = {
             fileName: "",
             name: "",
             timeStamp: 0,
             created_at: 0,
             dbModel: {}
+        }
+    }
+
+    connect(filePath) {
+        try {
+            this.filePath = filePath;
+            this.data = require(filePath)
+        }catch(err){
+            this.data = {}
         }
     }
 
@@ -30,7 +37,7 @@ class flashDB {
                         this.logModel.created_at = new Date()
                         this.logModel.dbModel = model
                         this.logModel.fileName = `${this.logModel.name}_${this.logModel.timeStamp}.json`
-                        fs.writeFile(path + this.logModel.fileName, JSON.stringify(this.logModel), "utf-8", (err) => {
+                        fs.writeFile(path + "/" + this.logModel.fileName, JSON.stringify(this.logModel), "utf-8", (err) => {
                             if (err) return console.error(err)
                             return console.log("Success to create log file: " + this.logModel.fileName)
                         })
