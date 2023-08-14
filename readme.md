@@ -13,21 +13,19 @@ instale o flashDB usando npm
 ## Como usar
 
 ```js
-const flashDB = require("flashdatabase");
-const flash = new flashDB();
+  const flashDB = require("flashdatabase")
+  const flash = new flashDB()
 
-flash.connect("./myDb.json");
+  flash.connect("./myFile.json")
 
-flash
-  .defaults({
-    myModel: true,
-  })
-  .save()
-  .createLog("created_default", "./logFolder");
+  flash.defaults({
+      state: 0
+  }).save().createLog("created_model", "./logFolder")
 
-flash.modify((data) => {
-  data.myModel = false;
-});
+  flash.modify(data=>{
+      data.state: 1
+  }).save()
 
-console.log(flash.getData());
+  console.log(flash.getData())
+
 ```
