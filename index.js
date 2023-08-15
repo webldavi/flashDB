@@ -1,5 +1,5 @@
 const fs = require('fs');
-class flashDB {
+class db {
     constructor() {
         this.logModel = {
             fileName: "",
@@ -14,7 +14,7 @@ class flashDB {
         try {
             this.filePath = filePath;
             this.data = require(filePath)
-        }catch(err){
+        } catch {
             this.data = {}
         }
     }
@@ -61,4 +61,6 @@ class flashDB {
         return this.data
     }
 }
-module.exports = flashDB
+
+export { db }
+module.exports = db

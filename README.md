@@ -12,8 +12,8 @@ instale o flashDB usando npm
 ## Como usar
 
 ```js
- const flashDB = require("flashdatabase");
-  const flash = new flashDB();
+  import * as Flash from 'flashdatabase'
+  const flash = new Flash.db();
   
   flash.connect("./myDb.json");
   
